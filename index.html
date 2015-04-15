@@ -1,16 +1,16 @@
 <html lang="zh_CN">
 
 <head>
-	<title>Adhoc AbTestDemo</title>
+  <title>Adhoc AbTestDemo</title>
 
-  <!-- Include Adhoc API -->
+  <!-- Include Adhoc javascript library -->
   <script src='http://www.appadhoc.com/downloads/web/adhoc.min.js'></script>
 </head>
 
-<!-- Please substitude ADHOC_50000000000000ad80c23462 to your Adhoc App Key -->
+<!-- Please substitude ADHOC_50000000000000ad80c23462 with your AdhocAppKey -->
 <body onload="adhoc.init('ADHOC_50000000000000ad80c23462')">
 
-  <!-- Use experiment flags -->
+  <!-- Use experiment flags to implement A/B versions -->
   <div id="flags"></div>
   <script>
     function applyFlags(flags) { 
@@ -26,13 +26,11 @@
 
   <!-- Get experiment flags -->
   <p>
-    <!-- Please substitude the ADHOC_APPKEY to your Adhoc App Key -->
     <button href="" onclick="adhoc.getExperimentFlags(applyFlags)">测试获得模块开关</button>
   </p>
 
   <!-- Report stats -->
   <p>
-    <!-- Please substitude the ADHOC_APPKEY to your Adhoc App Key -->
     <button href="" onclick="adhoc.incrementStat('clicks', 1)">统计点击次数</button>
   </p>
 </body>
